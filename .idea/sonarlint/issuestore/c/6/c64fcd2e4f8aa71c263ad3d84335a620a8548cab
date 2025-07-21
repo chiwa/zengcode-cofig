@@ -1,0 +1,12 @@
+
+N
+java:S16024",Remove useless curly braces around statement(™…‘“ùÿÿÿÿ8à¢å‚3
+P
+java:S1128	"3Remove this unused import 'org.redisson.api.RLock'.(’±ùÕ8á¢å‚3
+^
+java:S1128
+"<Remove this unused import 'org.redisson.api.RedissonClient'.(èøİàøÿÿÿÿ8á¢å‚3
+l
+java:S1128"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8â¢å‚3
+_
+java:S1128"=Remove this unused import 'jakarta.annotation.PostConstruct'.(û²ñüşÿÿÿÿ8â¢å‚3

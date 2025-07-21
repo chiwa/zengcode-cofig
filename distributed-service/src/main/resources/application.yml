@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+spring:
+  redis:
+    host: localhost
+    port: 6379
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/zengcode-config
+      database: zengcode-config
+
+kafka:
+  bootstrap-servers: localhost:9093
+  segment-bytes: 104857600
+
+mongock:
+  enabled: true
+  migration-scan-package: com.zengcode.config.repository.changelog
