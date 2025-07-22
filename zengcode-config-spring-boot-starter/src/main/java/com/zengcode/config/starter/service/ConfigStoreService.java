@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import zengcode.config.common.dto.ConfigPublishMessage;
@@ -14,6 +15,7 @@ import zengcode.config.common.utillity.PublishMessageOperation;
 import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicReference;
 
 @Slf4j
@@ -22,15 +24,17 @@ import java.util.concurrent.atomic.AtomicReference;
 @Setter
 public class ConfigStoreService {
 
-    @Lazy
+    private final ConcurrentHashMap<String, Object> configMap;
     private ZengcodeConfigRefresher configRefresher;
-    private final ConcurrentHashMap<String, Object> configMap = new ConcurrentHashMap<>();
-    private final AtomicReference<String> lastSnapshotId = new AtomicReference<>();
 
-    @Autowired
-    public void setConfigRefresher(@Lazy ZengcodeConfigRefresher configRefresher) {
+    public ConfigStoreService(@Qualifier("configMap") ConcurrentHashMap<String, Object> configMap,
+                              ZengcodeConfigRefresher configRefresher) {
+        this.configMap = configMap;
         this.configRefresher = configRefresher;
     }
+
+    private final AtomicReference<String> lastSnapshotId = new AtomicReference<>();
+
 
     public void apply(ConfigPublishMessage message) {
         String key = message.key();

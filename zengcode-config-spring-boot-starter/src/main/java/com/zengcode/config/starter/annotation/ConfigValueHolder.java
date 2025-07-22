@@ -14,6 +14,9 @@ public class ConfigValueHolder<T> {
         if (value == null && lazyLoader != null) {
             value = lazyLoader.get();
         }
+        if (value == null) {
+            throw new IllegalStateException("No value available for config. Both direct value and lazy loader returned null.");
+        }
         return value;
     }
 

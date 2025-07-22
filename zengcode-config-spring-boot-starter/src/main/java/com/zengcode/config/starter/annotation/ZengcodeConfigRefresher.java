@@ -1,8 +1,7 @@
 package com.zengcode.config.starter.annotation;
 
-import com.zengcode.config.starter.service.ConfigStoreService;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationListener;
@@ -13,21 +12,23 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Component
-@RequiredArgsConstructor
 @Slf4j
 public class ZengcodeConfigRefresher implements ApplicationListener<ApplicationReadyEvent> {
 
-    private final ConfigStoreService configStoreService;
+    @Qualifier("configMap")
+    private ConcurrentHashMap<String, Object> configMap;
     private final ApplicationContext context;
+
+    public ZengcodeConfigRefresher(@Qualifier("configMap") ConcurrentHashMap<String, Object> configMap,
+                                   ApplicationContext context) {
+        this.configMap = configMap;
+        this.context = context;
+    }
 
     private final Map<String, List<ConfigValueHolder<?>>> configKeyToHolders = new ConcurrentHashMap<>();
 
     @Override
     public void onApplicationEvent(ApplicationReadyEvent event) {
-        log.info("==================================");
-        log.info("======= Zengcode Config Init =======");
-        log.info("==================================");
-
         for (Object bean : context.getBeansWithAnnotation(Component.class).values()) {
             for (Field field : bean.getClass().getDeclaredFields()) {
                 ZengcodeConfig annotation = field.getAnnotation(ZengcodeConfig.class);
@@ -37,16 +38,16 @@ public class ZengcodeConfigRefresher implements ApplicationListener<ApplicationR
                     field.setAccessible(true);
 
                     try {
-                        // ⚠️ Always override with a Lazy Holder
-                        ConfigValueHolder<?> lazyHolder = new ConfigValueHolder<>(() -> configStoreService.getProperty(key));
+                        //Always override with a Lazy Holder
+                        ConfigValueHolder<?> lazyHolder = new ConfigValueHolder<>(() -> configMap.getOrDefault(key, ""));
                         field.set(bean, lazyHolder);
 
-                        // ✅ Register for runtime refresh
+                        //Register for runtime refresh
                         configKeyToHolders
                                 .computeIfAbsent(key, k -> new ArrayList<>())
                                 .add(lazyHolder);
 
-                        log.info("🔧 Injected Lazy Config Holder for key = {}", key);
+                        log.info("Injected Lazy Config Holder for key = {}, value = {}", key, configMap.getOrDefault(key, ""));
 
                     } catch (IllegalAccessException e) {
                         throw new RuntimeException("Failed to inject config value", e);
