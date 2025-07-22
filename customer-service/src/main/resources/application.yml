@@ -1,0 +1,15 @@
+server:
+  port: 8082
+
+
+zengcode:
+  config:
+    service: customer-service
+    version: 1.0.0
+    env: dev
+    kafka:
+      boot-strap: localhost:9093
+
+logging:
+  level:
+    org.apache.camel: INFO

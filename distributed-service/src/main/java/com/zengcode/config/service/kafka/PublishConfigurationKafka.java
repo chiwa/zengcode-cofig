@@ -59,6 +59,7 @@ public class PublishConfigurationKafka implements IPublishConfiguration {
             if (raw instanceof Set<?> keySet) {
                 keySet.forEach(keyObj -> {
                     String key = keyObj.toString();
+                    //Delete key from Kafka send null
                     Object actualValue = (op == PublishMessageOperation.DELETED) ? null : configs.get(key);
 
                     // ✅ 1. Always send ConfigPublishMessage (even DELETED)
