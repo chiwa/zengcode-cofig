@@ -8,6 +8,7 @@ import zengcode.config.common.dto.ConfigPublishMessage;
 import zengcode.config.common.utillity.PublishMessageOperation;
 
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -28,9 +29,8 @@ public class ConfigStoreService {
         switch (op) {
             case INITIAL -> {
                 String incomingSnapshot = message.lastSnapshotId();
-                if (!incomingSnapshot.equals(lastSnapshotId.get())) {
+                if (!Objects.equals(incomingSnapshot, lastSnapshotId.get())) {
                     configMap.clear();
-                    //Store it into DB in the future if it's needed
                     lastSnapshotId.set(incomingSnapshot);
                     log.info("🔄 New Snapshot ID: {}", incomingSnapshot);
                 }

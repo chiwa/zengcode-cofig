@@ -17,11 +17,3 @@ kafka:
 mongock:
   enabled: true
   migration-scan-package: com.zengcode.config.repository.changelog
-
-zengcode:
-  config:
-    service: customer-service
-    version: 1.0.0
-    env: dev
-    kafka:
-      boot-strap: localhost:9093
