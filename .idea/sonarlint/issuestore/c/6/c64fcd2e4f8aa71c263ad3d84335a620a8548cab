@@ -1,12 +1,12 @@
 
-N
-java:S16024",Remove useless curly braces around statement(™…‘“ùÿÿÿÿ8à¢å‚3
-P
-java:S1128	"3Remove this unused import 'org.redisson.api.RLock'.(’±ùÕ8á¢å‚3
-^
+t
+java:S16024",Remove useless curly braces around statement(™…‘“ùÿÿÿÿ8à¢å‚3J$36b916a9-f61f-4b8e-acf1-03033fc85931
+v
+java:S1128	"3Remove this unused import 'org.redisson.api.RLock'.(’±ùÕ8á¢å‚3J$4f9dd836-d7bf-43b5-955d-461583ea4e1d
+„
 java:S1128
-"<Remove this unused import 'org.redisson.api.RedissonClient'.(èøİàøÿÿÿÿ8á¢å‚3
-l
-java:S1128"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8â¢å‚3
-_
-java:S1128"=Remove this unused import 'jakarta.annotation.PostConstruct'.(û²ñüşÿÿÿÿ8â¢å‚3
+"<Remove this unused import 'org.redisson.api.RedissonClient'.(èøİàøÿÿÿÿ8á¢å‚3J$7cf615de-545c-408b-ac55-6d1f66724ad0
+’
+java:S1128"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›8â¢å‚3J$223df8cc-4d65-4a68-b58d-0c3d3bf7282a
+…
+java:S1128"=Remove this unused import 'jakarta.annotation.PostConstruct'.(û²ñüşÿÿÿÿ8â¢å‚3J$cf4ff1ff-fa1c-481f-9eab-85097acace45

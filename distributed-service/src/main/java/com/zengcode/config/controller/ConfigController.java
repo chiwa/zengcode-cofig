@@ -42,7 +42,7 @@ public class ConfigController {
      * @return
      */
     @PutMapping("")
-    public ConfigRequest addConfiguration(@RequestBody @NotNull ConfigRequest configRequest) {
+    public ConfigRequest upsertConfiguration(@RequestBody @NotNull ConfigRequest configRequest) {
         configurationService.upsertConfigurations(configRequest);
         return configRequest;
     }

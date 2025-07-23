@@ -1,6 +1,6 @@
 package com.zengcode.customer.controller;
 
-import com.zengcode.config.starter.annotation.ConfigValueHolder;
+import com.zengcode.config.starter.annotation.ZengcodeConfigGetter;
 import com.zengcode.config.starter.annotation.ZengcodeConfig;
 import com.zengcode.config.starter.service.ConfigStoreService;
 import lombok.RequiredArgsConstructor;
@@ -16,10 +16,10 @@ public class CustomerController {
     private final ConfigStoreService configStoreService;
 
     @ZengcodeConfig(key = "application.name")
-    private ConfigValueHolder<String> applicationName;
+    private ZengcodeConfigGetter<String> applicationName;
 
     @ZengcodeConfig(key = "test2")
-    private ConfigValueHolder<String> test2;
+    private ZengcodeConfigGetter<String> test2;
 
     @GetMapping
     public String applicationName() {

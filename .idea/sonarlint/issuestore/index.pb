@@ -90,3 +90,9 @@ lzengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/a
 ozengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/annotation/ConfigValueHolder.java,0/b/0b1635b244913d5757b19fd9d77adbfcc199545f
 ¥
 uzengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/annotation/ZengcodeConfigRefresher.java,f/c/fccd70e6b88fcdbda923a070f17c1c8dcde56a72
+¡
+qzengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/annotation/ZengcodeConfigProxy.java,6/c/6c24123d374c808dd4e7ca8be8afdc58741a2dcf
+œ
+lzengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/annotation/ConfigAccessor.java,4/5/45cfd22da7b7a10c2d77ef9537fc3cc64f74e801
+¢
+rzengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/annotation/ZengcodeConfigGetter.java,f/2/f29979bf0e7efc281e4057bdca6bfd73105988f3
