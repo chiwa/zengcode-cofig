@@ -2,8 +2,6 @@ package com.zengcode.config.service.kafka;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.redisson.api.RLock;
-import org.redisson.api.RedissonClient;
 import org.springframework.stereotype.Service;
 import org.springframework.kafka.core.KafkaTemplate;
 import zengcode.config.common.dto.ConfigPublishMessage;
@@ -13,7 +11,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
-import java.util.concurrent.TimeUnit;
 
 @Service
 @RequiredArgsConstructor
@@ -23,7 +20,6 @@ public class PublishConfigurationKafka implements IPublishConfiguration {
     private static final String CONFIG_PUBLISHER_LOCK = "config-publisher-lock";
     private final KafkaAdminService kafkaAdminService;
     private final KafkaTemplate<String, Object> kafkaTemplate;
-    private final RedissonClient redissonClient;
 
     @Override
     public void publishAllConfiguration(List<String> collections, Map<String, Object> configMapping) {

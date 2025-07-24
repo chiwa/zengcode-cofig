@@ -11,7 +11,6 @@ import org.apache.camel.component.jackson.JacksonDataFormat;
 import org.springframework.stereotype.Component;
 import zengcode.config.common.dto.ConfigPublishMessage;
 
-import java.util.Random;
 import java.util.UUID;
 
 @Component

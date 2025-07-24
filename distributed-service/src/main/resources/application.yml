@@ -17,3 +17,19 @@ kafka:
 mongock:
   enabled: true
   migration-scan-package: com.zengcode.config.repository.changelog
+
+aws:
+  s3:
+    region: ap-southeast-1
+    access-key:
+    secret-key:
+    bucket:
+      name: zengcode-config
+      folder:
+        incoming: "incoming/"
+        completed: "completed/"
+        error: "error/"
+
+config:
+  polling:
+    period-ms: 30000

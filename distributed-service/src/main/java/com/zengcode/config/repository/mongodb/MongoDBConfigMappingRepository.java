@@ -64,6 +64,7 @@ public class MongoDBConfigMappingRepository implements IConfigMappingRepository 
 
     @Override
     public Map<String, Object> upsert(ConfigRequest configRequest) {
+        if (configRequest == null) throw new IllegalArgumentException("ConfigRequest is null");
         String collectionName = String.format("%s_%s_%s_%s",
                 ZengcodeConfigEnum.CONFIGS.getValue(),
                 configRequest.getService(),

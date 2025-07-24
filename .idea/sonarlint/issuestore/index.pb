@@ -96,3 +96,27 @@ qzengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/a
 lzengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/annotation/ConfigAccessor.java,4/5/45cfd22da7b7a10c2d77ef9537fc3cc64f74e801
 ¢
 rzengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/annotation/ZengcodeConfigGetter.java,f/2/f29979bf0e7efc281e4057bdca6bfd73105988f3
+à
+Xdistributed-service/src/main/java/com/zengcode/config/configuration/AwsS3Properties.java,b/c/bc16709bb4c3d2bfe8fc7d240da1c3c441db62e9
+Ö
+Udistributed-service/src/main/java/com/zengcode/config/camelrouter/S3PollingRoute.java,f/0/f022465afbec4897154444312e588111f7d1ab75
+9
+	test.json,0/8/0866e153dfcc6bd976c2117b14bbaec292d57f78
+ã
+[distributed-service/src/main/java/com/zengcode/config/service/external/IExternalImport.java,4/3/434ba87d34a9ae898899656bdf6500e916a06960
+Ñ
+Tdistributed-service/src/main/java/com/zengcode/config/service/external/S3Import.java,7/6/762175e80f3a2be3011029cc56d03703e1ee0392
+ç
+]distributed-service/src/main/java/com/zengcode/config/service/external/AExternalImporter.java,1/9/19551d1a48dbfd37f97cdd0ce5fbd084f82c949f
+é
+^distributed-service/src/main/java/com/zengcode/config/service/external/S3ExternalImporter.java,0/7/07ad971fe8ebceec837c7aa126dcd626f194b661
+O
+customer-service_dev_1.0.0.json,1/7/178b6000034af9cc5315f98326c4b3dd5144b557
+c
+3customer-service/src/main/resources/application.yml,c/8/c85191373f70c88d5a9483fbc69d2bde2610ceee
+∏
+ázengcode-config-spring-boot-starter/src/main/resources/META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports,4/5/45207e7577a036a8e9d2f47764a5fc55516f9403
+T
+$customer-service_dev_1.0.0 copy.json,8/4/84b45f006eaf5268948fdd5b8793771b59964cac
+d
+4spring-boot-starter/src/main/java/zengcode/Main.java,e/c/ec975b50f1095880d6d1461a261244a5c44d02b7

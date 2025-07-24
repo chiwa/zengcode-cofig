@@ -1,0 +1,13 @@
+{
+  "service": "customer-service",
+  "env": "dev",
+  "version": "1.0.0",
+  "configs": {
+    "feature.signup.enabled": true,
+    "feature.signup.success.notify": false,
+    "test2": "Hello Test 2 Edit2",
+    "test3": "Hello Test 3",
+    "test4": "Hello Test 4 edited",
+    "application.name": "Customer Service Version 1.0.0"
+  }
+}

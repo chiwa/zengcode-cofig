@@ -10,6 +10,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.serializer.JsonSerializer;
+import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
+import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
+import software.amazon.awssdk.regions.Region;
+import software.amazon.awssdk.services.s3.S3Client;
 import zengcode.config.common.utillity.DistributedLock;
 
 import java.util.HashMap;
@@ -36,5 +40,15 @@ public class ZengCodeConfiguration {
     @Bean
     public DistributedLock distributedLock() {
         return new DistributedLock(redissonClient);
+    }
+
+    @Bean
+    public S3Client s3Client(AwsS3Properties props) {
+        return S3Client.builder()
+                .region(Region.of(props.getRegion()))
+                .credentialsProvider(StaticCredentialsProvider.create(
+                        AwsBasicCredentials.create(props.getAccessKey(), props.getSecretKey())
+                ))
+                .build();
     }
 }

@@ -59,8 +59,9 @@ public class KafkaAdminService {
             } else {
                 log.error("❌ Failed to create topic: {}", topicName, e);
             }
-        } catch (Exception e) {
-            log.error("❌ Unexpected error while creating topic: {}", topicName, e);
+        } catch (InterruptedException e) {
+            log.error("Interrupted!", e);
+            Thread.currentThread().interrupt();
         }
     }
 

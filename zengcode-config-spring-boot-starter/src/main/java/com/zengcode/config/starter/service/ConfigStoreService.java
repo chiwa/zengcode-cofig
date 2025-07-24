@@ -44,14 +44,8 @@ public class ConfigStoreService {
                 }
                 configMap.put(key, value);
             }
-
-            case NEW, UPDATED -> {
-                configMap.put(key, value);
-            }
-
-            case DELETED -> {
-                configMap.remove(key);
-            }
+            case NEW, UPDATED -> configMap.put(key, value);
+            case DELETED -> configMap.remove(key);
         }
         log.info("✅ Updated Config Map: {}", configMap);
     }
