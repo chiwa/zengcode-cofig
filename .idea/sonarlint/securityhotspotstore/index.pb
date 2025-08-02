@@ -64,8 +64,6 @@ Xdistributed-service/src/main/java/com/zengcode/config/configuration/ConfigConst
 rzengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/config/ZengcodeConfigProperties.java,3/0/30b25643add806af3b35f0d3f7acb0d92643a5e2
 ©
 yzengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/config/ZengcodeConfigAutoConfiguration.java,1/7/17497b0379a491a9c11fa938508e2b7b18c4ef43
-õ
-kzengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/ConfigKafkaConsumerRoute.java,5/0/50549fc8529cb622c8480d57cd217a712c0be1c9
 ù
 mzengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/service/ConfigStoreService.java,f/4/f454a3279b5d55c2a92020c32e85154c49839665
 °
@@ -74,10 +72,6 @@ qzengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/c
 vzengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/controller/ConfigInternalController.java,1/2/12eb8e8b446eb4a30985f5a626b2d5514e64c1e0
 H
 customer-service/pom.xml,5/8/5828c3b58c65a5dabc2340b48a37b3e92462b9b0
-a
-1customer-service/src/main/java/zengcode/Main.java,0/d/0d1c14b191ce9d84b77ef5a013b5189c895fd303
-n
->customer-service/src/main/java/com/zengcode/customer/Main.java,7/c/7c315408a8d46417ee70f2f2f8ef093aa98c5695
 u
 Ecustomer-service/src/main/java/com/zengcode/customer/Application.java,3/6/364d0bf28a2c6787c6b2c3182d47529693ecc5fb
 á
@@ -86,26 +80,14 @@ Wcustomer-service/src/main/java/com/zengcode/customer/controller/CustomerControl
 lzengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/annotation/ZengcodeConfig.java,e/9/e93f2579eebe11e20b921c9e475da61b2db862c8
 ≠
 }zengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/annotation/ZengcodeConfigBeanPostProcessor.java,d/7/d7b215aa11519e96c3cb71170bf641e38f9fdea6
-ü
-ozengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/annotation/ConfigValueHolder.java,0/b/0b1635b244913d5757b19fd9d77adbfcc199545f
-•
-uzengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/annotation/ZengcodeConfigRefresher.java,f/c/fccd70e6b88fcdbda923a070f17c1c8dcde56a72
 °
 qzengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/annotation/ZengcodeConfigProxy.java,6/c/6c24123d374c808dd4e7ca8be8afdc58741a2dcf
-ú
-lzengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/annotation/ConfigAccessor.java,4/5/45cfd22da7b7a10c2d77ef9537fc3cc64f74e801
 ¢
 rzengcode-config-spring-boot-starter/src/main/java/com/zengcode/config/starter/annotation/ZengcodeConfigGetter.java,f/2/f29979bf0e7efc281e4057bdca6bfd73105988f3
 à
 Xdistributed-service/src/main/java/com/zengcode/config/configuration/AwsS3Properties.java,b/c/bc16709bb4c3d2bfe8fc7d240da1c3c441db62e9
 Ö
 Udistributed-service/src/main/java/com/zengcode/config/camelrouter/S3PollingRoute.java,f/0/f022465afbec4897154444312e588111f7d1ab75
-9
-	test.json,0/8/0866e153dfcc6bd976c2117b14bbaec292d57f78
-ã
-[distributed-service/src/main/java/com/zengcode/config/service/external/IExternalImport.java,4/3/434ba87d34a9ae898899656bdf6500e916a06960
-Ñ
-Tdistributed-service/src/main/java/com/zengcode/config/service/external/S3Import.java,7/6/762175e80f3a2be3011029cc56d03703e1ee0392
 ç
 ]distributed-service/src/main/java/com/zengcode/config/service/external/AExternalImporter.java,1/9/19551d1a48dbfd37f97cdd0ce5fbd084f82c949f
 é
@@ -120,3 +102,11 @@ T
 $customer-service_dev_1.0.0 copy.json,8/4/84b45f006eaf5268948fdd5b8793771b59964cac
 d
 4spring-boot-starter/src/main/java/zengcode/Main.java,e/c/ec975b50f1095880d6d1461a261244a5c44d02b7
+R
+"distributed-config-service/pom.xml,4/0/40e195178b856e85ca80e8a500ff4b6981601f0b
+U
+%distributed-config-service/dockerfile,c/9/c95e6abb2e754ccf2d128b29b1619516e2456eaf
+T
+$distributed-config-service/deploy.sh,2/e/2ea2710377545113dcf4cf6cfd55b637fd3d2a9d
+ï
+edistributed-config-service/src/main/java/com/zengcode/config/configuration/ZengCodeConfiguration.java,1/2/1207a304aaa4cdf378e0286951a0792ca7d0f37d

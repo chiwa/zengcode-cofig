@@ -1,8 +1,0 @@
-
-	java:S1127"FDefine and throw a dedicated exception instead of using a generic one.(°Ë†ûÿÿÿÿ8Ûêš‘ƒ3J$01b74edd-3139-47af-9b4a-40cbcdccd3e4
-½
-java:S1319"zThe type of "configMap" should be an interface such as "ConcurrentMap" rather than the implementation "ConcurrentHashMap".(ÿ“ñü8İêš‘ƒ3J$624636b3-5527-4e9b-b7d4-f7b17ef6a1c4
-o
-java:S3011&",This accessibility update should be removed.(˜ÂÓ˜8ëêš‘ƒ3J$9eb88ce9-dac8-435b-a0e9-a39925880ff0
-t
-java:S3011-",This accessibility bypass should be removed.(íì÷éşÿÿÿÿ8ëæğ‘ƒ3J$f355ead1-85dc-4073-b90e-9c8f24d3cfdb

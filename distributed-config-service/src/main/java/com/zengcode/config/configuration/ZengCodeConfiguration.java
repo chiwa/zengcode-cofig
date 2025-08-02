@@ -3,7 +3,9 @@ package com.zengcode.config.configuration;
 import lombok.RequiredArgsConstructor;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
+import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
+import org.redisson.config.Config;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +18,7 @@ import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.s3.S3Client;
 import zengcode.config.common.utillity.DistributedLock;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,7 +29,19 @@ public class ZengCodeConfiguration {
     @Value("${kafka.bootstrap-servers}")
     private String bootstrapServers;
 
-    private final RedissonClient redissonClient;
+    @Value("${spring.redis.host}")
+    private String redisHost;
+
+    @Value("${spring.redis.port}")
+    private String redisPort;
+
+    @Bean
+    public RedissonClient redissonClient() {
+        Config config = new Config();
+        config.useSingleServer()
+                .setAddress("redis://" + redisHost + ":" + redisPort);
+        return Redisson.create(config);
+    }
 
     @Bean
     public KafkaTemplate<String, Object> kafkaTemplate() {
@@ -39,7 +54,7 @@ public class ZengCodeConfiguration {
 
     @Bean
     public DistributedLock distributedLock() {
-        return new DistributedLock(redissonClient);
+        return new DistributedLock(redissonClient());
     }
 
     @Bean

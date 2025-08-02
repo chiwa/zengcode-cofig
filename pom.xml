@@ -22,8 +22,8 @@
         <camel-kafka-starter.version>4.11.0</camel-kafka-starter.version>
     </properties>
     <modules>
-        <module>zencode-config-common</module>
-        <module>distributed-service</module>
+        <module>zengcode-config-common</module>
+        <module>distributed-config-service</module>
         <module>zengcode-config-spring-boot-starter</module>
         <module>customer-service</module>
     </modules>
@@ -78,6 +78,18 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <distributionManagement>
+        <repository>
+            <id>zengcode-releases</id>
+            <name>ZengcCode Release Repository</name>
+            <url>http://localhost:8081/repository/zengcode-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>zengcode-snapshots</id>
+            <name>ZengCode Snapshot Repository</name>
+            <url>http://localhost:8081/repository/zengcode-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
     <build>
         <pluginManagement>
             <plugins>
@@ -91,7 +103,20 @@
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>3.0.0-M1</version>
                 </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>3.0.1</version>
+                    <configuration>
+                        <tagNameFormat>@{project.artifactId}-@{project.version}</tagNameFormat>
+                        <releaseProfiles>release</releaseProfiles>
+                        <goals>deploy</goals>
+                        <scmCommentPrefix>[RELEASE]</scmCommentPrefix>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
+
+
 </project>

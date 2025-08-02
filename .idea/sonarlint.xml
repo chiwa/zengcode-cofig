@@ -3,6 +3,8 @@
   <component name="SonarLintProjectSettings">
     <option name="moduleMapping">
       <map>
+        <entry key="distributed-config-service" value="distributed-service" />
+        <entry key="zengcode-config-common" value="zencode-config-common" />
         <entry key="zengcode-config-spring-boot-starter" value="spring-boot-starter" />
       </map>
     </option>
