@@ -1,7 +1,7 @@
 package com.zengcode.customer.controller;
 
-import com.zengcode.config.starter.annotation.ZengcodeConfigGetter;
 import com.zengcode.config.starter.annotation.ZengcodeConfig;
+import com.zengcode.config.starter.annotation.ZengcodeConfigGetter;
 import com.zengcode.config.starter.service.ConfigStoreService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

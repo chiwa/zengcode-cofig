@@ -30,7 +30,7 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>zengcode</groupId>
+            <groupId>com.zengcode.config</groupId>
             <artifactId>zengcode-config-spring-boot-starter</artifactId>
             <version>1.0.0</version>
         </dependency>
